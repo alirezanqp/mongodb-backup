@@ -75,14 +75,9 @@ To schedule regular backups and uploads to AWS S3, you can use the cron utility 
 
 3. Add the following line to the file:
 
+   ```bash
+   0 0 * * * /path/to/script.sh
    ```
-   0 
-
-Oops! It looks like the response got cut off. Here's the complete README for scheduling regular backups using cron:
-
-```bash
-0 0 * * * /path/to/script.sh
-```
 
 Replace `/path/to/script.sh` with the actual path to the script on your system.
 
