@@ -70,7 +70,7 @@ To schedule regular backups, you can use the cron utility on Linux systems. Cron
    0 */3 * * * /path/to/backup.sh
    ```
 
-   Replace `/path/to/script.sh` with the actual path to the script on your system.
+   Replace `/path/to/backup.sh` with the actual path to the script on your system.
 
    This cron schedule expression will run the script every 3 hours, at the top of the hour (e.g., 1:00 AM, 4:00 AM, 7:00 AM, etc.).
 
