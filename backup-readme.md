@@ -14,7 +14,7 @@ This script allows you to perform a backup of your MongoDB database and create a
 2. Make sure you have execute permissions for the script. If not, you can grant the permissions using the following command:
 
    ```bash
-   chmod +x script.sh
+   chmod +x backup.sh
    ```
 
 3. Modify the script variables according to your MongoDB setup:
@@ -23,20 +23,23 @@ This script allows you to perform a backup of your MongoDB database and create a
 
    - `MONGO_PORT`: The port on which MongoDB is running. By default, it is set to "27020".
 
-   - `MONGO_USERNAME`: The username to authenticate with MongoDB. Modify this if your MongoDB requires authentication. By default, it is set to "test".
-
-   - `MONGO_PASSWORD`: The password to authenticate with MongoDB. Modify this if your MongoDB requires authentication. By default, it is set to "test".
-
    - `MONGO_DATABASE`: The name of the database you want to backup. Modify this according to your database name. By default, it is set to "test".
 
-   - `BACKUP_DIR`: The directory where you want to store the backup files. Modify this to specify the desired directory path. By default, it is set to "/home/alirezanqp/Desktop/mongo_backup/backups".
+   - `BACKUP_DIR`: The directory where you want to store the backup files. Modify this to specify the desired directory path. By default, it is set to "/home/username/mongo_backup/backups".
 
-   - `ZIP_PASSWORD`: The password to protect the zip file. Modify this to set your desired password. By default, it is set to "66554422".
+   - `ZIP_PASSWORD`: The password to protect the zip file. Modify this to set your desired password. By default, it is set to "password".
+
+   - Note: If your database has authentication, enter the username and password
+   and update the mongodump command:
+      - `MONGO_USERNAME`: The username to authenticate with MongoDB. Modify this if your MongoDB requires authentication. By default, it is set to "test". 
+
+      - `MONGO_PASSWORD`: The password to authenticate with MongoDB. Modify this if your MongoDB requires authentication. By default, it is set to "test".
+
 
 4. Run the script using the following command:
 
    ```bash
-   ./script.sh
+   ./backup.sh
    ```
 
 5. The script will perform the following steps:
@@ -64,7 +67,7 @@ To schedule regular backups, you can use the cron utility on Linux systems. Cron
 3. Add the following line to the file:
 
    ```
-   0 */3 * * * /path/to/script.sh
+   0 */3 * * * /path/to/backup.sh
    ```
 
    Replace `/path/to/script.sh` with the actual path to the script on your system.

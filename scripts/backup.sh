@@ -10,12 +10,12 @@ MONGO_DATABASE="test"
 
 # Backup directory
 DATE=`date +%Y-%m-%d_%H-%M-%S`
-BACKUP_DIR="/home/alirezanqp/Desktop/mongo_backup/backups"
+BACKUP_DIR="/home/username/mongo_backup/backups"
 BACKUP_NAME="mongodb_backup_$DATE.gz"
 
 # Zip file details
 ZIP_FILE="$BACKUP_DIR/mongodb_backup_$DATE.zip"
-ZIP_PASSWORD="66554422"
+ZIP_PASSWORD="test"
 
 # Perform MongoDB backup
 mongodump --host "$MONGO_HOST" --port "$MONGO_PORT" --db "$MONGO_DATABSAE" --gzip --archive="$BACKUP_DIR/$BACKUP_NAME"

@@ -9,7 +9,7 @@ This script allows you to perform cleanup of files in a specified directory that
 2. Make sure you have execute permissions for the script. If not, you can grant the permissions using the following command:
 
    ```bash
-   chmod +x script.sh
+   chmod +x cleanup.sh
    ```
 
 3. Modify the script according to your setup:
@@ -19,14 +19,12 @@ This script allows you to perform cleanup of files in a specified directory that
 4. Run the script using the following command:
 
    ```bash
-   ./script.sh
+   ./cleanup.sh
    ```
 
 5. The script will perform the following steps:
 
-   - Calculate the timestamp for files that were created 30 days ago using the `date` command.
-
-   - Find files in the specified directory that were created 30 days ago or earlier using the `find` command.
+   - Find files in the specified directory that were created 30 days ago using the `find` command.
 
    - Delete the found files using the `rm` command.
 
@@ -45,10 +43,10 @@ To schedule the cleanup process to run every night, you can use the cron utility
 3. Add the following line to the file:
 
    ```
-   0 0 * * * /path/to/script.sh
+   0 0 * * * /path/to/cleanup.sh
    ```
 
-   Replace `/path/to/script.sh` with the actual path to the script on your system.
+   Replace `/path/to/cleanup.sh` with the actual path to the script on your system.
 
    This cron schedule expression will run the script every night at midnight (00:00).
 

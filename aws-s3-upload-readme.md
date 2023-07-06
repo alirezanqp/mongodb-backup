@@ -16,7 +16,7 @@ This script allows you to perform a backup of your MongoDB database and upload t
 2. Make sure you have execute permissions for the script. If not, you can grant the permissions using the following command:
 
    ```bash
-   chmod +x script.sh
+   chmod +x upload.sh
    ```
 
 3. Modify the script according to your setup:
@@ -32,7 +32,7 @@ This script allows you to perform a backup of your MongoDB database and upload t
 4. Run the script using the following command:
 
    ```bash
-   ./script.sh
+   ./upload.sh
    ```
 
 5. The script will perform the following steps:
@@ -76,10 +76,10 @@ To schedule regular backups and uploads to AWS S3, you can use the cron utility 
 3. Add the following line to the file:
 
    ```bash
-   0 0 * * * /path/to/script.sh
+   0 0 * * * /path/to/upload.sh
    ```
 
-Replace `/path/to/script.sh` with the actual path to the script on your system.
+Replace `/path/to/upload.sh` with the actual path to the script on your system.
 
 This cron schedule expression will run the script every 24 hours, at midnight (00:00) each day.
 
