@@ -1,4 +1,4 @@
-#  MongoDB Backup and Cleanup Scripts
+#  MongoDB Backup and S3 Upload Scripts
 
 This repository contains scripts for performing backup and cleanup operations for MongoDB databases. These scripts are designed to simplify the process of creating database backups, compressing them into zip files, and uploading them to AWS S3 for long-term storage. Additionally, there is a script included for cleaning up old backup files to free up disk space.
 
