@@ -14,4 +14,4 @@ Please navigate to the respective readme files for detailed instructions on usin
 
 Note: Make sure to review and modify the scripts and configurations according to your specific requirements and environment.
 
-If you have any questions or need further assistance, feel free to reach out. Happy backup and cleanup operations!
+If you have any questions or need further assistance, feel free to reach out. Happy backup operation!
